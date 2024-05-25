@@ -11,23 +11,23 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //初期ユーザーの登録（登録自体は問題ないけどPWの暗号化処理わからん）
+        //初期ユーザーの登録　暗号化処理→bcryptで解決
         DB::table('users')->insert([
             ['username' => 'Atlas一郎',
             'mail' => 'Atlas01@mail.com',
-            'password' => 1000],
+            'password' => bcrypt(1000)],
             ['username' => 'Atlas二郎',
             'mail' => 'Atlas02@mail.com',
-            'password' => 2000],
+            'password' => bcrypt(2000)],
             ['username' => 'Atlas三郎',
             'mail' => 'Atlas03@mail.com',
-            'password' => 3000],
+            'password' => bcrypt(3000)],
             ['username' => 'Atlas四郎',
             'mail' => 'Atlas04@mail.com',
-            'password' => 4000],
+            'password' => bcrypt(4000)],
             ['username' => 'Atlas五郎',
             'mail' => 'Atlas05@mail.com',
-            'password' => 5000]
+            'password' => bcrypt(5000)]
         ]);
     }
 }
