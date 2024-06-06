@@ -5,6 +5,17 @@
 {!! Form::open(['url' => '/register']) !!}
 
 <h2>新規ユーザー登録</h2>
+<!--　　※バリデーションエラー確認用※
+<div>
+    @if ($errors->any())
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    @endif
+</div>
+-->
 
 {{ Form::label('ユーザー名') }}
 {{ Form::text('username',null,['class' => 'input']) }}
