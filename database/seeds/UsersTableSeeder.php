@@ -11,7 +11,16 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //初期ユーザーの登録　暗号化処理→bcryptで解決
+        //-------------------ユーザーの登録条件-------------------
+        //UserName          ：2文字以上,12文字以内
+        //MailAdress"       ：5文字以上,40文字以内・登録済みメールアドレス使用不可・メールアドレスの形式
+        //Password          ：8文字以上,20文字以内・英数字のみ
+        //PasswordConfirm   ：8文字以上,20文字以内・英数字のみ・Password入力欄と一致しているか
+        //------------------------------------------------------
+        //・暗号化処理→bcryptで解決
+        //
+        //
+        //-------------------初期ユーザーの登録-------------------
         DB::table('users')->insert([
             ['username' => 'Atlas一郎',
             'mail' => 'Atlas01@mail.com',
