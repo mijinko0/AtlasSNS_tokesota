@@ -18,6 +18,8 @@
     <!--iphoneのアプリアイコン指定-->
     <link rel="apple-touch-icon-precomposed" href="画像のURL" />
     <!--OGPタグ/twitterカード-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 </head>
 <body>
     <header>
@@ -25,13 +27,38 @@
         <h1><a  href="top"><img src="images/atlas.png"></a></h1><!--ヘッダーロゴ-->
             <div id="">
                 <div id="">
-                    <p>{{ Auth::user()->username }}さん<img src="images/arrow.png"></p>
-                <div>
-                <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
-                    <li><a href="/logout">ログアウト</a></li>
-                </ul>
+
+<!-- 2024/06/06　アコーディオンメニューの実装で苦戦してます。。。 -->
+                <!-- アコーディオンメニュー -->
+                <div class="accordion">
+                    <div class="accordion-container">
+                        <div class="accordion-item">
+                            <h3 class="accordion-title js-accordion-title">
+                            {{ Auth::user()->username }}さん</h3>
+                            <!--/.accordion-title-->
+                            <div class="accordion-content">
+                                <ul>
+                                    <li><a href="/top">ホーム</a></li>
+                                    <li><a href="/profile">プロフィール</a></li>
+                                    <li><a href="/logout">ログアウト</a></li>
+                                </ul>
+                            </dev>
+                            <!--/.accordion-content-->
+                        </div>
+                        <div  class="accordion-item">
+                            <img src="images/arrow.png"></div>
+                    </div>
+                </div>
+
+
+
+            <div>
+             <!--darailsを用いたアコーディオンメニュー-->
+             <!--<details>
+                    <summary><a href="/top">ホーム</a></summary>
+                    <summary><a href="/profile">プロフィール</a></summary>
+                    <summary><a href="/logout">ログアウト</a></summary>
+                </details>-->
             </div>
         </div>
     </header>
@@ -58,7 +85,6 @@
     </div>
     <footer>
     </footer>
-    <script src="JavaScriptファイルのURL"></script>
-    <script src="JavaScriptファイルのURL"></script>
+
 </body>
 </html>
