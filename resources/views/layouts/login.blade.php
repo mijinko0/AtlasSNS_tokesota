@@ -34,22 +34,20 @@
                     <div class="accordion-container">
                         <div class="accordion-item">
                             <h3 class="accordion-title js-accordion-title">
-                            {{ Auth::user()->username }}さん</h3>
-                            <!--/.accordion-title-->
-                            <div class="accordion-content">
-                                <ul>
-                                    <li><a href="/top">ホーム</a></li>
-                                    <li><a href="/profile">プロフィール</a></li>
-                                    <li><a href="/logout">ログアウト</a></li>
-                                </ul>
-                            </dev>
-                            <!--/.accordion-content-->
+                                {{ Auth::user()->username }}   さん</h3>
+                                <div class="accordion-content">
+                                    <ul>
+                                        <li><a href="/top">ホーム</a></li>
+                                        <li><a href="/profile">プロフィール</a></li>
+                                        <li><a href="/logout">ログアウト</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        <div class="accordion-item">
+                            <img src="images/icon1.png">
                         </div>
-                        <div  class="accordion-item">
-                            <img src="images/arrow.png"></div>
                     </div>
                 </div>
-
 
 
             <div>

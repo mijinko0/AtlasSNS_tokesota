@@ -24,15 +24,15 @@ header {
     border-left: 1px solid #727272;
 }
 
-/*アコーディオンメニュー*/
+/*---アコーディオンメニュー---*/
 .accordion {
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    max-width: 300px;
+    max-width: 500px;
     position: absolute;
-    right: 0;
-    width: 100%;
+    top: 45px;
+    right: 0px;
 }
 
 /* .accordion-container {
@@ -47,29 +47,39 @@ header {
     color: #fff;
     cursor: pointer;
     font-size: 16px;
-    padding: 10px 20px;
+    padding: 10px 50px;
 }
 
 .accordion-content {
     display: none;
     padding: 10px 20px;
+    background-color: #fff;
 }
 
 .accordion-content li {
     font-size: 13px;
     line-height: 1.5;
+    padding: 20px 60px;
+}
+
+.accordion-container {
+    display: flex;
+    align-items: center;
 }
 
 /* タイトルの背景色 */
 .accordion-item:nth-of-type(1) .accordion-title {
-    background-color: #7f7fff;
+    background-color: #186AC9;
 }
 
 /* コンテンツボックスの枠線 */
 .accordion-item:nth-of-type(1) .accordion-content {
-    border-bottom: 2px solid #7f7fff;
-    border-left: 2px solid #7f7fff;
-    border-right: 2px solid #7f7fff;
+    border-bottom: 2px solid #186AC9;
+    border-left: 2px solid #186AC9;
+    border-right: 2px solid #186AC9;
+    position: absolute;
+    right: 0;
+    bottom: -202px;
 }
 
 /* 矢印 */
@@ -84,7 +94,7 @@ header {
     display: block;
     height: 8px;
     position: absolute;
-    right: 25px;
+    right: 5%;
     top: 38%;
     transform: rotate(135deg);
     transition: transform .3s ease-in-out, top .3s ease-in-out;
