@@ -7,7 +7,15 @@ body {}
 /* header */
 header {
     background: #186AC9;
+    height: 116px;
+    display: flex;
+    align-items: center;
 }
+
+#head {
+    padding: 38px 35px 35px 35px;
+}
+
 
 /* main content */
 #row {
@@ -29,9 +37,8 @@ header {
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    max-width: 500px;
     position: absolute;
-    top: 45px;
+    top: 0%;
     right: 0px;
 }
 
@@ -46,25 +53,37 @@ header {
 .accordion-title {
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
-    padding: 10px 50px;
+    font-size: 26px;
+    font-family: "メイリオ";
+    font-weight: bold;
+    padding: 10px 90px;
 }
 
 .accordion-content {
     display: none;
-    padding: 10px 20px;
     background-color: #fff;
+    width: 400px;
 }
 
 .accordion-content li {
-    font-size: 13px;
+    font-size: 30px;
     line-height: 1.5;
-    padding: 20px 60px;
+    padding: 37px 20px;
+    text-align: center;
 }
+
+.accordion-content li:hover {
+    color: #fff;
+    background-color: #253178;
+    /*ホバーした時に白くなってほしい…*/
+}
+
 
 .accordion-container {
     display: flex;
     align-items: center;
+    height: 116px;
+    padding: 3px 45px;
 }
 
 /* タイトルの背景色 */
@@ -74,12 +93,21 @@ header {
 
 /* コンテンツボックスの枠線 */
 .accordion-item:nth-of-type(1) .accordion-content {
-    border-bottom: 2px solid #186AC9;
-    border-left: 2px solid #186AC9;
-    border-right: 2px solid #186AC9;
+    border-bottom: 2px solid #253178;
+    border-left: 2px solid #253178;
+    border-right: 2px solid #253178;
     position: absolute;
     right: 0;
-    bottom: -202px;
+    bottom: -353px;
+}
+
+a:link,
+a:visited {
+    color: #727272;
+}
+
+a:hover {
+    color: #fff;
 }
 
 /* 矢印 */
@@ -88,17 +116,17 @@ header {
 }
 
 .accordion-title::after {
-    border-right: solid 2px #fff;
-    border-top: solid 2px #fff;
+    border-right: solid 3px #fff;
+    border-top: solid 3px #fff;
     content: "";
     display: block;
-    height: 8px;
+    height: 17px;
     position: absolute;
-    right: 5%;
-    top: 38%;
+    right: 9%;
+    top: 14%;
     transform: rotate(135deg);
     transition: transform .3s ease-in-out, top .3s ease-in-out;
-    width: 8px;
+    width: 17px;
 }
 
 .accordion-title.open::after {

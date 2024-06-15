@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a  href="top"><img src="images/atlas.png"></a></h1><!--ヘッダーロゴ-->
+        <h1><a  href="top"><img src="images/atlas.png"width="138" height="51"></a></h1><!--ヘッダーロゴ-->
             <div id="">
                 <div id="">
 
@@ -34,24 +34,24 @@
                     <div class="accordion-container">
                         <div class="accordion-item">
                             <h3 class="accordion-title js-accordion-title">
-                                {{ Auth::user()->username }}   さん</h3>
+                                {{ Auth::user()->username }} さん</h3>
                                 <div class="accordion-content">
                                     <ul>
-                                        <li><a href="/top">ホーム</a></li>
-                                        <li><a href="/profile">プロフィール</a></li>
+                                        <li><a href="/top">HOME</a></li>
+                                        <li><a href="/profile">プロフィール編集</a></li>
                                         <li><a href="/logout">ログアウト</a></li>
                                     </ul>
                                 </div>
                             </div>
                         <div class="accordion-item">
-                            <img src="images/icon1.png">
+                            <img src="images/icon1.png"> <!--ログインしているユーザーのアイコンに変えたい!-->
                         </div>
                     </div>
                 </div>
 
 
             <div>
-             <!--darailsを用いたアコーディオンメニュー-->
+             <!--detailsを用いたアコーディオンメニュー-->
              <!--<details>
                     <summary><a href="/top">ホーム</a></summary>
                     <summary><a href="/profile">プロフィール</a></summary>
