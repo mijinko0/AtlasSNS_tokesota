@@ -24,7 +24,7 @@
 <body>
     <header>
         <div id = "head">
-        <h1><a  href="top"><img src="images/atlas.png"width="138" height="51"></a></h1><!--ヘッダーロゴ-->
+        <h1><a  href="top"><img src="images/atlas.png"width="137" height="51"></a></h1><!--ヘッダーロゴ-->
             <div id="">
                 <div id="">
 
@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                         <div class="accordion-item">
-                            <img src="images/icon1.png"> <!--ログインしているユーザーのアイコンに変えたい!-->
+                            <img src="images/{{ Auth::user()->images }}">
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
         </div >
         <div id="side-bar">
             <div id="confirm">
-                <p>〇〇さんの</p>
+                <p>{{ Auth::user()->username }}さんの</p>
                 <div>
                 <p>フォロー数</p>
                 <p>〇〇名</p>
