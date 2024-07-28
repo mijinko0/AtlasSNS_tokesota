@@ -134,3 +134,8 @@ a:hover {
     top: 45%;
     transform: rotate(-45deg);
 }
+
+/*---投稿画面---*/
+.send {
+    border-radius: 5px;
+}
