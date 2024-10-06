@@ -15,8 +15,8 @@ class PostsController extends Controller
         return view('posts.index',['posts'=>$posts]);
     }
 
-    public function create(Request $request){
     //投稿内容を保存する処理
+    public function create(Request $request){
     $user_id = Auth::user()->id;//ログイン情報から参照
     $post = $request->input('post');//投稿データ参照
     Post::create([
@@ -27,4 +27,16 @@ class PostsController extends Controller
         return redirect('/top');
     }
 
+    //編集する投稿データへのルーティング
+    public function update(Request $request)
+    {
+        // $post = Post::where('id', $id)->first();
+        $id = $request->input('post_id');//編集する投稿のIDをbladeから受け取り
+        $post = $request->input('new_post');//編集する投稿内容をbladeから受け取り
+        Post::where('id', $id)->update(['post' => $post]);//受け取った内容で更新処理
+
+        return redirect('/top');
+    }
+
+    // 10/6　次回投稿削除実装
 }
