@@ -37,3 +37,17 @@ $(function () {
     return false;
   });
 });
+
+
+// 削除用
+$(function () {
+  $('.js-trash').on('click', function () {
+    var message = "この投稿を削除します。よろしいでしょうか？";
+    if (confirm(message)) {
+      var post_id = $(this).attr('post_id');
+      return redirect('/post/delete');
+    } else {
+      return false;
+    }
+  });
+});

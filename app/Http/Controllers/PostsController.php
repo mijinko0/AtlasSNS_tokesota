@@ -39,4 +39,10 @@ class PostsController extends Controller
     }
 
     // 10/6　次回投稿削除実装
+    public function delete($id)
+    {
+        Post::where('id', $id)->delete();
+
+        return redirect('/top')->with('message', '投稿が削除されました');
+    }
 }
