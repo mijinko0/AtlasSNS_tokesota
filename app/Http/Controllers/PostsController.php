@@ -37,8 +37,6 @@ class PostsController extends Controller
 
         return redirect('/top');
     }
-
-    // 10/6　次回投稿削除実装
     public function delete($id)
     {
         Post::where('id', $id)->delete();
